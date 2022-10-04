@@ -25,7 +25,7 @@ class UserDetails extends StatelessWidget {
           TextSpan(
             children: [
               TextSpan(text: user.address),
-              TextSpan(text: '${user.jobTitle} - '),
+              TextSpan(text: ' ${user.jobTitle} - '),
               TextSpan(text: user.employer),
             ],
           ),

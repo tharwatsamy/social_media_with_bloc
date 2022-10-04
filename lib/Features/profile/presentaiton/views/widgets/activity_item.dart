@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social_media_ui/Features/profile/data/models/user_derails.dart';
+import 'package:social_media_ui/styles.dart';
 
 import '../../../../../constants.dart';
 
@@ -18,8 +19,19 @@ class ActivityItem extends StatelessWidget {
             radius: 25,
             backgroundImage: AssetImage(activity.profileImage),
           ),
-          title: Text(activity.name),
-          subtitle: Text('${activity.time}hours ago'),
+          title: Text(
+            activity.name,
+            style: const TextStyle(
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          subtitle: Text(
+            '${activity.time} hours ago',
+            style: TextStyle(
+              color: Colors.grey.withOpacity(.7),
+              fontSize: 12,
+            ),
+          ),
           trailing: const Icon(
             Icons.more_horiz,
           ),

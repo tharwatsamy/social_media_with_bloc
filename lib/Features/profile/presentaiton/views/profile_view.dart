@@ -39,14 +39,14 @@ class _ProfileViewState extends State<ProfileView> {
               label: '',
               icon: Icon(
                 FontAwesomeIcons.envelopeOpen,
-                size: 18,
+                size: 20,
               ),
             ),
             const BottomNavigationBarItem(
               label: '',
               icon: Icon(
                 FontAwesomeIcons.magnifyingGlass,
-                size: 18,
+                size: 20,
               ),
             ),
             BottomNavigationBarItem(
@@ -73,7 +73,7 @@ class _ProfileViewState extends State<ProfileView> {
               label: '',
               icon: Icon(
                 FontAwesomeIcons.userGroup,
-                size: 18,
+                size: 20,
               ),
             ),
             BottomNavigationBarItem(
@@ -83,7 +83,7 @@ class _ProfileViewState extends State<ProfileView> {
                 children: const [
                   Icon(
                     FontAwesomeIcons.bell,
-                    size: 18,
+                    size: 20,
                   ),
                   Positioned(
                     top: -8,

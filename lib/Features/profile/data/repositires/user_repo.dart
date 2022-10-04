@@ -43,11 +43,28 @@ class UserRepo {
       skillsCollection: [
         SkillsCollection(
           name: 'Main Skills',
-          skills: ['#design', '#graphics', '#virtual', '#reality', 'adobexd'],
+          skills: [
+            '#design',
+            '#graphics',
+            '#mobile apps',
+            '#virtual',
+            '#reality',
+            '#adobexd'
+          ],
         ),
         SkillsCollection(
           name: 'Complementary Skills',
-          skills: ['#design', '#graphics', '#virtual', '#reality', 'adobexd'],
+          skills: ['#design', '#bloc pattern', '#flutter', '#mvvm', 'adobexd'],
+        ),
+        SkillsCollection(
+          name: 'Soft Skills',
+          skills: [
+            '#team player',
+            '#problem solver',
+            '#attention to details',
+            '#mvvm',
+            'adobexd'
+          ],
         )
       ],
     );

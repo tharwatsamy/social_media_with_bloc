@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social_media_ui/Features/profile/data/models/user_derails.dart';
+import 'package:social_media_ui/Features/profile/presentaiton/views/widgets/profile_page_view.dart';
 
 import 'all_skills_item.dart';
 
@@ -10,7 +11,10 @@ class SkillsCollectionsListView extends StatelessWidget {
   final List<SkillsCollection> skillsCollections;
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return ListView.separated(
+        separatorBuilder: (context, index) {
+          return const ListViewSeprator();
+        },
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
         itemCount: skillsCollections.length,

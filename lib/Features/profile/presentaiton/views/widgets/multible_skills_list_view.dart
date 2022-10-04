@@ -15,11 +15,11 @@ class MultibleSkillsListview extends StatelessWidget {
       direction: Axis.horizontal,
       children: skills
           .map(
-            (e) => const SizedBox(
+            (e) => SizedBox(
               height: 34,
               child: SkillsItem(
                 isActive: true,
-                text: '#design',
+                text: e,
               ),
             ),
           )

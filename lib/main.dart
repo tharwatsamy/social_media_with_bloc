@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:social_media_ui/Features/profile/data/repositires/user_repo.dart';
 import 'package:social_media_ui/Features/profile/presentaiton/blocs/bloc/user_details_bloc.dart';
 import 'package:social_media_ui/Features/profile/presentaiton/views/profile_view.dart';
@@ -25,7 +26,7 @@ class SocialMediaApp extends StatelessWidget {
         theme: ThemeData(
           brightness: Brightness.light,
           scaffoldBackgroundColor: Colors.white,
-          fontFamily: 'Poppins',
+          textTheme: GoogleFonts.poppinsTextTheme(),
         ),
         debugShowCheckedModeBanner: false,
         routes: {
