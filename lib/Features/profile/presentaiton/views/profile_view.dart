@@ -23,23 +23,21 @@ class _ProfileViewState extends State<ProfileView> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: BlocBuilder<UserDetailsBloc, UserDetailsState>(
-          builder: (context, state) {
-            if (state is UserDetailsSuccess) {
-              return const ProfileViewBody();
-            } else if (state is UserDetailsFailure) {
-              return Center(
-                child: Text(state.errMessage),
-              );
-            } else {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            }
-          },
-        ),
+    return Scaffold(
+      body: BlocBuilder<UserDetailsBloc, UserDetailsState>(
+        builder: (context, state) {
+          if (state is UserDetailsSuccess) {
+            return const SafeArea(child: ProfileViewBody());
+          } else if (state is UserDetailsFailure) {
+            return Center(
+              child: Text(state.errMessage),
+            );
+          } else {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+        },
       ),
     );
   }

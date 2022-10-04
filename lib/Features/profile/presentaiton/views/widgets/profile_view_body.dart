@@ -18,7 +18,7 @@ class ProfileViewBody extends StatelessWidget {
             child: Column(
               children: const [
                 SizedBox(
-                  height: 16,
+                  height: 8,
                 ),
                 CustomSearchAppBar(),
                 SizedBox(
@@ -36,9 +36,6 @@ class ProfileViewBody extends StatelessWidget {
                   height: 16,
                 ),
                 CustomDivider(),
-                SizedBox(
-                  height: 16,
-                ),
               ],
             ),
           )

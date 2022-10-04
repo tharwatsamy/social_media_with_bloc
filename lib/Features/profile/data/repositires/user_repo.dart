@@ -23,7 +23,7 @@ class UserRepo {
       jobTitle: 'Ux Designer',
       employer: 'Apple',
       description: 'Offering Ux design servies in Istanbul',
-      skills: ['#design', '#graphics', '#virtual', '#reality', 'adobexd'],
+      skills: ['#design', '#graphics', '#virtual', '#reality', '#adobexd'],
       activities: [
         Activity(
           profileImage: AssetsData.profile,

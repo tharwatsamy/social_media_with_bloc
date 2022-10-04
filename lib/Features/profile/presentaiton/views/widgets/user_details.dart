@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social_media_ui/Features/profile/presentaiton/views/widgets/skills_list_view.dart';
+import 'package:social_media_ui/core/utils/functions/get_user_details.dart';
 
 import '../../../../../styles.dart';
 
@@ -8,38 +9,40 @@ class UserDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var user = getUserDetails(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: const [
+      children: [
         Text(
-          'Ersad Basbag',
+          user.name,
           style: Styles.body1,
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
         Text.rich(
           style: Styles.body6,
           TextSpan(
             children: [
-              TextSpan(text: 'Istanbul  |  '),
-              TextSpan(text: 'Turkey'),
-              TextSpan(text: 'Ux Designer - '),
-              TextSpan(text: 'Apple'),
+              TextSpan(text: user.address),
+              TextSpan(text: '${user.jobTitle} - '),
+              TextSpan(text: user.employer),
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
         Text(
-          'Offering Ux design services in Istanbul',
+          user.description,
           style: Styles.body6,
         ),
-        SizedBox(
+        const SizedBox(
           height: 16,
         ),
-        SkillsListView(),
+        SkillsListView(
+          skills: user.skills,
+        ),
       ],
     );
   }

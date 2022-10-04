@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:social_media_ui/Features/profile/presentaiton/views/widgets/profile_actions_button.dart';
 import 'package:social_media_ui/Features/profile/presentaiton/views/widgets/user_details.dart';
+import 'package:social_media_ui/core/utils/functions/get_user_details.dart';
 
 import 'connect_button.dart';
 import 'connections_info.dart';
@@ -11,13 +12,15 @@ class ProfileInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var user = getUserDetails(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           children: [
-            const CircleAvatar(
+            CircleAvatar(
               radius: 55,
+              backgroundImage: AssetImage(user.image),
             ),
             const SizedBox(
               width: 24,
@@ -40,7 +43,7 @@ class ProfileInfo extends StatelessWidget {
         ),
         const UserDetails(),
         const SizedBox(
-          height: 32,
+          height: 24,
         ),
         Row(
           children: const [

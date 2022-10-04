@@ -19,16 +19,16 @@ class ConnectButton extends StatelessWidget {
           Icon(
             Icons.bolt_outlined,
             size: 20,
-            color: Colors.white.withOpacity(.8),
+            color: Colors.white.withOpacity(.7),
           ),
           const SizedBox(
-            width: 16,
+            width: 8,
           ),
           Text(
             'Connect',
             style: TextStyle(
               fontSize: 18,
-              color: Colors.white.withOpacity(.8),
+              color: Colors.white.withOpacity(.7),
             ),
           )
         ],

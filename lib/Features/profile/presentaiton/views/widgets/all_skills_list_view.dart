@@ -1,19 +1,27 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:social_media_ui/Features/profile/data/models/user_derails.dart';
 
 import 'all_skills_item.dart';
-class AllSkillsListView extends StatelessWidget {
-  const AllSkillsListView({Key? key}) : super(key: key);
 
+class SkillsCollectionsListView extends StatelessWidget {
+  const SkillsCollectionsListView({Key? key, required this.skillsCollections})
+      : super(key: key);
+
+  final List<SkillsCollection> skillsCollections;
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
-        itemCount: 10,
+        itemCount: skillsCollections.length,
         itemBuilder: (context, index) {
-          return const AllSkillsItem();
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            child: AllSkillsItem(
+              skills: skillsCollections[index].skills,
+              text: skillsCollections[index].name,
+            ),
+          );
         });
   }
 }
