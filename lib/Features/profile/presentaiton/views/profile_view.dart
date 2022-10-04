@@ -9,8 +9,10 @@ class ProfileView extends StatelessWidget {
   static String id = 'profille view';
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: const ProfileViewBody(),
+    return SafeArea(
+      child: Scaffold(
+        body: const ProfileViewBody(),
+      ),
     );
   }
 }
