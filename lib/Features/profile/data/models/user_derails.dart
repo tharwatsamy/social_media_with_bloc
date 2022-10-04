@@ -1,4 +1,4 @@
-class UserDetails {
+class UserDetailsModel {
   final String image;
 
   final int connectionsNumber;
@@ -9,11 +9,11 @@ class UserDetails {
   final String jobTitle;
   final String employer;
   final String description;
-  final List<Skill> skills;
+  final List<String> skills;
   final List<Activity> activities;
   final List<SkillsCollection> skillsCollection;
 
-  UserDetails({
+  UserDetailsModel({
     required this.image,
     required this.connectionsNumber,
     required this.followersNumber,
@@ -53,7 +53,7 @@ class Activity {
 
 class SkillsCollection {
   final String name;
-  final List<Skill> skills;
+  final List<String> skills;
 
   SkillsCollection({
     required this.name,
