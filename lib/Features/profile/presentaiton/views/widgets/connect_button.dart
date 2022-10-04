@@ -18,6 +18,7 @@ class ConnectButton extends StatelessWidget {
         children: [
           Icon(
             Icons.electric_bolt,
+            size: 20,
             color: Colors.white.withOpacity(.8),
           ),
           const SizedBox(
@@ -26,7 +27,7 @@ class ConnectButton extends StatelessWidget {
           Text(
             'Connect',
             style: TextStyle(
-              fontSize: 20,
+              fontSize: 18,
               color: Colors.white.withOpacity(.8),
             ),
           )

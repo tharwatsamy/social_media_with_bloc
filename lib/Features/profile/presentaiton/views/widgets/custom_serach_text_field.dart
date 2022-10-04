@@ -8,21 +8,24 @@ class SearchTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-        prefixIconColor: kPrimaryColor,
-        prefixIcon: const Padding(
-          padding: EdgeInsets.only(left: 16),
-          child: Icon(
-            FontAwesomeIcons.magnifyingGlass,
-            color: kPrimaryColor,
-            size: 22,
+    return SizedBox(
+      height: 40,
+      child: TextField(
+        decoration: InputDecoration(
+          prefixIconColor: kPrimaryColor,
+          prefixIcon: const Padding(
+            padding: EdgeInsets.only(left: 16),
+            child: Icon(
+              FontAwesomeIcons.magnifyingGlass,
+              color: kPrimaryColor,
+              size: 16,
+            ),
           ),
+          contentPadding: const EdgeInsets.symmetric(),
+          border: buildBorder(),
+          disabledBorder: buildBorder(),
+          enabledBorder: buildBorder(),
         ),
-        contentPadding: const EdgeInsets.symmetric(),
-        border: buildBorder(),
-        disabledBorder: buildBorder(),
-        enabledBorder: buildBorder(),
       ),
     );
   }

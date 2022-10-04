@@ -1,9 +1,8 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:social_media_ui/Features/profile/presentaiton/views/widgets/skills_list_view.dart';
 
 import '../../../../../styles.dart';
+
 class UserDetails extends StatelessWidget {
   const UserDetails({Key? key}) : super(key: key);
 
@@ -38,7 +37,7 @@ class UserDetails extends StatelessWidget {
           style: Styles.body6,
         ),
         SizedBox(
-          height: 8,
+          height: 16,
         ),
         SkillsListView(),
       ],

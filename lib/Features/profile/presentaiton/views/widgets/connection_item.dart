@@ -13,7 +13,7 @@ class ConnectionItem extends StatelessWidget {
           Text(
             '100+',
             style: TextStyle(
-              fontSize: 22,
+              fontSize: 18,
               fontWeight: FontWeight.w900,
             ),
           ),

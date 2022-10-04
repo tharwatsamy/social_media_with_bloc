@@ -11,10 +11,13 @@ class SkillsItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         border: Border.all(color: Colors.grey.withOpacity(.3)),
       ),
-      child: const Center(
-        child: Text(
-          '# design',
-        ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [
+          Text(
+            '# design',
+          ),
+        ],
       ),
     );
   }
