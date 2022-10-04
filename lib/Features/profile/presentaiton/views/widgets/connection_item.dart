@@ -20,7 +20,7 @@ class ConnectionItem extends StatelessWidget {
           Text(
             'Conncetions',
             maxLines: 1,
-            style: Styles.body1,
+            style: Styles.body6,
           ),
         ],
       ),

@@ -5,6 +5,7 @@ import 'package:social_media_ui/Features/profile/presentaiton/views/widgets/prof
 import 'package:social_media_ui/constants.dart';
 
 import 'connections_info.dart';
+import 'custom_divider.dart';
 
 class ProfileViewBody extends StatelessWidget {
   const ProfileViewBody({Key? key}) : super(key: key);
@@ -12,27 +13,22 @@ class ProfileViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
-        const SizedBox(
+      children: const [
+        SizedBox(
           height: 16,
         ),
-        const CustomSearchAppBar(),
-        const SizedBox(
+        CustomSearchAppBar(),
+        SizedBox(
           height: 8,
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12),
-          child: Divider(
-            color: Colors.grey.withOpacity(.5),
-          ),
-        ),
-        const SizedBox(
+        CustomDivider(),
+        SizedBox(
           height: 16,
         ),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 24),
           child: ProfileInfo(),
-        )
+        ),
       ],
     );
   }
