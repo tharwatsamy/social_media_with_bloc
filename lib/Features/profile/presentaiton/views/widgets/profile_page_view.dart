@@ -46,6 +46,13 @@ class _ProfilePageViewState extends State<ProfilePageView> {
           Row(
             children: [
               PageViewTapItem(
+                onTap: () {
+                  _controller.animateToPage(
+                    0,
+                    duration: const Duration(milliseconds: 250),
+                    curve: Curves.easeIn,
+                  );
+                },
                 isActive: isActive(0),
                 text: 'Activity',
                 icon: Icons.dashboard,
@@ -54,6 +61,13 @@ class _ProfilePageViewState extends State<ProfilePageView> {
                 width: 24,
               ),
               PageViewTapItem(
+                onTap: () {
+                  _controller.animateToPage(
+                    1,
+                    duration: const Duration(milliseconds: 250),
+                    curve: Curves.easeIn,
+                  );
+                },
                 text: 'About',
                 isActive: isActive(1),
                 icon: Icons.portrait,

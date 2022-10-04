@@ -7,7 +7,7 @@ class PageViewTapItem extends StatelessWidget {
     Key? key,
     required this.text,
     required this.icon,
-    this.isActive = false,
+    this.isActive = false, required this.onTap,
   }) : super(key: key);
 
   final String text;
@@ -15,26 +15,30 @@ class PageViewTapItem extends StatelessWidget {
   final IconData icon;
 
   final bool isActive;
+  final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(
-          icon,
-          color: !isActive ? Colors.grey.withOpacity(.6) : kPrimaryColor,
-        ),
-        const SizedBox(
-          width: 8,
-        ),
-        Text(
-          text,
-          style: !isActive
-              ? Styles.body6
-              : const TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-        )
-      ],
+    return GestureDetector(
+      onTap: onTap,
+      child: Row(
+        children: [
+          Icon(
+            icon,
+            color: !isActive ? Colors.grey.withOpacity(.6) : kPrimaryColor,
+          ),
+          const SizedBox(
+            width: 8,
+          ),
+          Text(
+            text,
+            style: !isActive
+                ? Styles.body6
+                : const TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+          )
+        ],
+      ),
     );
   }
 }
