@@ -17,7 +17,7 @@ class ConnectButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(
-            Icons.electric_bolt,
+            Icons.bolt_outlined,
             size: 20,
             color: Colors.white.withOpacity(.8),
           ),
