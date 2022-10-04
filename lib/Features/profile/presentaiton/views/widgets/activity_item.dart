@@ -49,7 +49,7 @@ class ActivityItem extends StatelessWidget {
             aspectRatio: 5 / 3,
             child: Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(8),
                 color: kPrimaryColor,
                 image: DecorationImage(
                   image: AssetImage(activity.activityImage),
