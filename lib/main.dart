@@ -14,6 +14,7 @@ class SocialMediaApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.light,
         scaffoldBackgroundColor: Colors.white,
+        fontFamily: 'Poppins',
       ),
       debugShowCheckedModeBanner: false,
       routes: {
