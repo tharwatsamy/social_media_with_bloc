@@ -4,8 +4,8 @@ import 'package:social_media_ui/core/utils/functions/get_user_details.dart';
 
 import '../../../../../styles.dart';
 
-class UserDetails extends StatelessWidget {
-  const UserDetails({Key? key}) : super(key: key);
+class AdditionalInfo extends StatelessWidget {
+  const AdditionalInfo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class UserDetails extends StatelessWidget {
           style: Styles.body1,
         ),
         const SizedBox(
-          height: 8,
+          height: 4,
         ),
         Text.rich(
           style: Styles.body6,
@@ -31,7 +31,7 @@ class UserDetails extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 8,
+          height: 4,
         ),
         Text(
           user.description,

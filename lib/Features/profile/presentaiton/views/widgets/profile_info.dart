@@ -41,7 +41,7 @@ class ProfileInfo extends StatelessWidget {
         const SizedBox(
           height: 16,
         ),
-        const UserDetails(),
+        const AdditionalInfo(),
         const SizedBox(
           height: 24,
         ),
