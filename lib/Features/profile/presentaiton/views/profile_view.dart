@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:social_media_ui/Features/profile/presentaiton/blocs/bloc/user_details_bloc.dart';
 import 'package:social_media_ui/Features/profile/presentaiton/views/widgets/profile_view_body.dart';
+import 'package:social_media_ui/constants.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({Key? key}) : super(key: key);
@@ -24,6 +26,86 @@ class _ProfileViewState extends State<ProfileView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+          currentIndex: 2,
+          unselectedIconTheme: const IconThemeData(
+            color: Colors.grey,
+          ),
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          selectedItemColor: kPrimaryColor,
+          items: [
+            const BottomNavigationBarItem(
+              label: '',
+              icon: Icon(
+                FontAwesomeIcons.envelopeOpen,
+                size: 18,
+              ),
+            ),
+            const BottomNavigationBarItem(
+              label: '',
+              icon: Icon(
+                FontAwesomeIcons.magnifyingGlass,
+                size: 18,
+              ),
+            ),
+            BottomNavigationBarItem(
+              label: '',
+              icon: CircleAvatar(
+                backgroundColor: kPrimaryColor.withOpacity(.05),
+                child: Container(
+                  padding: const EdgeInsets.all(2),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: kPrimaryColor,
+                    ),
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(
+                    FontAwesomeIcons.plus,
+                    size: 18,
+                    color: kPrimaryColor,
+                  ),
+                ),
+              ),
+            ),
+            const BottomNavigationBarItem(
+              label: '',
+              icon: Icon(
+                FontAwesomeIcons.userGroup,
+                size: 18,
+              ),
+            ),
+            BottomNavigationBarItem(
+              label: '',
+              icon: Stack(
+                clipBehavior: Clip.none,
+                children: const [
+                  Icon(
+                    FontAwesomeIcons.bell,
+                    size: 18,
+                  ),
+                  Positioned(
+                    top: -8,
+                    right: -4,
+                    child: CircleAvatar(
+                      radius: 8,
+                      backgroundColor: Color(0xffBE3744),
+                      child: Center(
+                        child: Text(
+                          '5',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ]),
       body: BlocBuilder<UserDetailsBloc, UserDetailsState>(
         builder: (context, state) {
           if (state is UserDetailsSuccess) {
