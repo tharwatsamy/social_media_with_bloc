@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:social_media_ui/Features/profile/presentaiton/views/widgets/profile_actions_button.dart';
-import 'package:social_media_ui/Features/profile/presentaiton/views/widgets/skills_list_view.dart';
-import 'package:social_media_ui/styles.dart';
+import 'package:social_media_ui/Features/profile/presentaiton/views/widgets/user_details.dart';
 
+import 'connect_button.dart';
 import 'connections_info.dart';
+import 'options_button.dart';
 
 class ProfileInfo extends StatelessWidget {
   const ProfileInfo({Key? key}) : super(key: key);
@@ -38,48 +39,20 @@ class ProfileInfo extends StatelessWidget {
           height: 16,
         ),
         const UserDetails(),
-      ],
-    );
-  }
-}
-
-class UserDetails extends StatelessWidget {
-  const UserDetails({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: const [
-        Text(
-          'Ersad Basbag',
-          style: Styles.body1,
+        const SizedBox(
+          height: 32,
         ),
-        SizedBox(
-          height: 8,
-        ),
-        Text.rich(
-          style: Styles.body6,
-          TextSpan(
-            children: [
-              TextSpan(text: 'Istanbul  |  '),
-              TextSpan(text: 'Turkey'),
-              TextSpan(text: 'Ux Designer - '),
-              TextSpan(text: 'Apple'),
-            ],
-          ),
-        ),
-        SizedBox(
-          height: 8,
-        ),
-        Text(
-          'Offering Ux design services in Istanbul',
-          style: Styles.body6,
-        ),
-        SizedBox(
-          height: 8,
-        ),
-        SkillsListView(),
+        Row(
+          children: const [
+            Expanded(
+              child: ConnectButton(),
+            ),
+            SizedBox(
+              width: 16,
+            ),
+            OptionsButton(),
+          ],
+        )
       ],
     );
   }
