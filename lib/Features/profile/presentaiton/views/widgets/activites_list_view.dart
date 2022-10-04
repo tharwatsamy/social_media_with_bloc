@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:social_media_ui/Features/profile/data/models/user_derails.dart';
 import 'package:social_media_ui/Features/profile/presentaiton/views/widgets/profile_page_view.dart';
 
+import '../../../data/models/activity_model.dart';
 import 'activity_item.dart';
 
 class ActivitiesListView extends StatelessWidget {

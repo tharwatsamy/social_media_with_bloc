@@ -1,3 +1,7 @@
+import 'package:social_media_ui/Features/profile/data/models/skills_collection.dart';
+
+import 'activity_model.dart';
+
 class UserDetailsModel {
   final String image;
 
@@ -26,37 +30,5 @@ class UserDetailsModel {
     required this.skills,
     required this.activities,
     required this.skillsCollection,
-  });
-}
-
-class Skill {
-  final String name;
-
-  Skill({required this.name});
-}
-
-class Activity {
-  final String profileImage;
-  final String name;
-  final String time;
-
-  final String content;
-  final String activityImage;
-
-  Activity(
-      {required this.profileImage,
-      required this.name,
-      required this.time,
-      required this.content,
-      required this.activityImage});
-}
-
-class SkillsCollection {
-  final String name;
-  final List<String> skills;
-
-  SkillsCollection({
-    required this.name,
-    required this.skills,
   });
 }

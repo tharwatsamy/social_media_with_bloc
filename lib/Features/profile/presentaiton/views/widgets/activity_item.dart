@@ -3,6 +3,7 @@ import 'package:social_media_ui/Features/profile/data/models/user_derails.dart';
 import 'package:social_media_ui/styles.dart';
 
 import '../../../../../constants.dart';
+import '../../../data/models/activity_model.dart';
 
 class ActivityItem extends StatelessWidget {
   const ActivityItem({Key? key, required this.activity}) : super(key: key);
